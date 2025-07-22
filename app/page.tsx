@@ -23,12 +23,11 @@ export default async function Home() {
   if (!res.ok) throw new Error("Failed to fetch data");
 
   const data: Products = await res.json();
-  console.log(data);
 
   return (
     <div className="container mx-auto">
       <h1 className=" text-3xl text-center p-4 font-bold text-blue-400 shadow-2xl shadow-blue-200">ONLINE SHOP</h1>
-      <ul className="container grid md:grid-cols-3 lg:grid-cols-4 gap-4 mx-4 my-8">
+      <ul className="container grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-4 my-8">
         {data.map(product => <li
           key={product.id}
           className="border-1 border-blue-200 rounded-b-2xl shadow-2xl shadow-blue-300"

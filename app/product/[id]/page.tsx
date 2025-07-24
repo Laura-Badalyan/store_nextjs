@@ -1,4 +1,4 @@
-import ClientProductView from "@/app/components/ClientProductView";
+import ClientProductView from "@/components/ClientProductView";
 
 type Product = {
   id: number;
@@ -18,7 +18,7 @@ type Params = {
 };
 
 export default async function Product({ params }: Params) {
-  const res = await fetch(`https://fakestoreapi.com/products/${params.id}`, {
+  const res = await fetch(`https://fakestoreapi.com/products/${params?.id}`, {
     next: { revalidate: 60 },
   });
 

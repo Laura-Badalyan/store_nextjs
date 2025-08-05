@@ -13,11 +13,7 @@ type Product = {
   };
 };
 
-type Params = {
-  params: { id: string };
-};
-
-export default async function Product({ params }: Params) {
+export default async function Product({ params }: {params: { id: string }}) {
   const res = await fetch(`https://fakestoreapi.com/products/${params.id}`, {
     next: { revalidate: 60 },
   });

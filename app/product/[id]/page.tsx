@@ -1,4 +1,4 @@
-import ClientProductView from "@/app/components/ClientProductView";
+import ClientProductView from "@/components/ClientProductView";
 
 type Product = {
   id: number;

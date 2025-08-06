@@ -49,8 +49,11 @@ export default function ClientProductView({ product }: { product: Product }) {
                                 src={product.image}
                                 alt={product.title}
                                 layout="fill"
-                                objectFit="contain"
-                                className="rounded-lg"
+                                width={300}
+                                height={300}
+                                sizes="(max-width: 768px) 100vw, 480px"
+                                priority
+                                className="object-contain rounded-lg"
                             />
                         </div>
                     </div>
@@ -69,8 +72,10 @@ export default function ClientProductView({ product }: { product: Product }) {
                     <Image
                         src={product.image}
                         alt={product.title}
-                        layout="fill"
-                        objectFit="contain"
+                        width={300}
+                        height={300}
+                        className="object-contain"
+                        priority //նախապես բեռնվում է
                     />
                 </div>
 

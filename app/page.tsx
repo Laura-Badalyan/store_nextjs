@@ -90,9 +90,9 @@ export default function Home() {
                             <Image
                                 src={product.image}
                                 alt={product.title}
-                                className="object-cover"
                                 width={100}
-                                height={50}
+                                height={100}
+                                className="w-24 h-auto object-cover"
                             />
                         </Link>
                         <p className="text-[14px] text-center my-4 text-blue-900">{product.title}</p>

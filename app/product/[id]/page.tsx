@@ -19,7 +19,7 @@ type Params = {
 
 export default async function Product({ params }: Params) {
 
-  const { id } = await params
+  const { id } = await params;
 
   const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
     next: { revalidate: 60 },

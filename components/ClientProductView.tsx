@@ -48,7 +48,6 @@ export default function ClientProductView({ product }: { product: Product }) {
                             <Image
                                 src={product.image}
                                 alt={product.title}
-                                layout="fill"
                                 width={300}
                                 height={300}
                                 sizes="(max-width: 768px) 100vw, 480px"
